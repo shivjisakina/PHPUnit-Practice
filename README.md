@@ -22,8 +22,9 @@
 * Test to make sure its an integer
  
 #### Edge Cases
-* If the result is a string, boolean, or array
-* If the result is between 0.7 and 4.0
+* If the result is a string, boolean, or array - Bad Path
+* If the result is an interger:
+    * If the result is between 0.7 and 4.0 - Happy Path
 
 #### Public Properties
 * Name

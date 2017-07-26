@@ -9,13 +9,16 @@
     <body>
     <?php
 
-    class helloWorldClass
+    /*class helloWorldClass
     {
 
-        public $hello;
+        public $helloVar;
 
-        public function helloWorld()
+        public function helloWorld($hello)
         {
+
+            $this->helloVar = $helloVar;
+
             if ("bye world" === $hello) {
                 throw new InvalidArgumentException("but you never said hello :(");
             } else {
@@ -25,6 +28,27 @@
     }
 
     $bye = new helloWorldClass("bye world");
+    echo $bye;
+
+    */
+    use PHPUnit\Framework\TestCase;
+
+    class StackTest extends TestCase
+    {
+        public function testPushAndPop()
+        {
+            $stack = [];
+            $this->assertEquals(0, count($stack));
+
+            array_push($stack, 'foo');
+            $this->assertEquals('foo', $stack[count($stack)-1]);
+            $this->assertEquals(1, count($stack));
+
+            $this->assertEquals('foo', array_pop($stack));
+            $this->assertEquals(0, count($stack));
+        }
+    }
+    ?>
 
     ?>
     </body>
